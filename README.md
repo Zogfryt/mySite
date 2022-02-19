@@ -1,2 +1,3 @@
 # mySite
-Testowa strona o mnie żeby przećwiczyć programowanie stron internetowych
+
+Testowa strona żeby potrenować tworzenie własnych stron internetowych oraz fronte-endu
