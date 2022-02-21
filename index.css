@@ -1,24 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne+Tactile&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&family=Poppins&family=Syne+Tactile&display=swap');
 
 html {
     font-size: 10px;
-    font-family: 'Syne Tactile', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-size: 1.3em;
-}
-
-body::before {
-    content: " ";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: rgba(40, 40, 40, 1);
+    font-size: 1.3rem;
+    margin: 0px;
 }
 
 #image {
@@ -60,6 +52,10 @@ li {
     align-items: center;
 }
 
+#nav-bar {
+    margin-right: 30px;
+}
+
 .nav-link {
     text-decoration: none;
     color: white;
@@ -67,9 +63,129 @@ li {
 }
 
 #navigation-list {
-    width: 300px;
+    width: 30em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 0px;
+    margin-left: 30px;
 }
 
+#About {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(-135deg, hsl(242,47%,18%),rgb(41, 18, 83));
+}
+
+#About > h1 {
+    font-size: 5rem;
+    color: rgb(230, 209, 209);
+    margin: 0.5rem 0px;
+}
+
+#About > p {
+    font-size: 2.5rem;
+    color:rgb(255, 230, 0);
+    margin: 0.5rem 0px;
+    font-weight: bold;
+}
+
+#languages {
+    background: linear-gradient(-135deg,rgb(145, 16, 16),rgb(76, 24, 143));
+    display: flex;
+    flex-direction: column;
+}
+
+#languages > header{
+    text-align: center;
+    font-size: 5rem;
+    color: rgb(230, 209, 209);
+    padding: 2em 1em 1em 1em;
+}
+
+#display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    max-width: 600px;
+    grid-gap: 2rem;
+    align-self: center;
+}
+
+.logo-image {
+    position: absolute;
+    left: 35px;
+    top: 10px;
+    width: 150px;
+    height: auto;
+    z-index: 1;
+}
+
+#java {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 120px;
+    height: auto;
+}
+
+#C {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    width: 180px;
+    height: auto;
+}
+
+#c-plus {
+    position: absolute;
+    top: 15px;
+    left: 42px;
+    width: 136px;
+    height: auto;
+}
+
+
+.outer-cell {
+    position: relative;
+    width: 220px;
+    height: 260px;
+}
+
+.cell {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 8px black solid;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 2;
+}
+
+
+.cell > p {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    color: rgb(230, 209, 209);
+    text-align: center;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: black;
+    padding: 1rem 0px;
+    margin: 0px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.cell:hover {
+    opacity: 1;
+}
